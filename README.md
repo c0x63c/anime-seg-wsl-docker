@@ -16,7 +16,9 @@ docker compose build
 ## Usage
 
 * Attach Docker
-docker exec -it anime-seg-wsl-docker-script /bin/bash
+```
+docker exec -it anime-seg01 /bin/bash
+```
 
 * Execution anime-segmentation
 ```
