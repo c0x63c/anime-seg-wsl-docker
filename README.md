@@ -11,6 +11,7 @@
 * Build Docker with the following command
 ```
 docker compose build
+```
 
 ## Usage
 
