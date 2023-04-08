@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  script:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anime-seg01
+    tty: true
+    environment:
+      gpus: 'all'
+    volumes:
+      - ./volumes/data:/data
+    logging:
+      options:
+        max-size: '200k'
+        max-file: '10'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
