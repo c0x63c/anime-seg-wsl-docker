@@ -22,7 +22,8 @@ docker exec -it anime-seg01 /bin/bash
 
 * Execution anime-segmentation
 ```
-python3 inference.py --net isnet_is --ckpt ./anime-seg/isnetis.ckpt --data /data/input/ --out /data/output/ --img-size 1024 --only-matted
+docker compose up
+docker exec anime-seg01 python3 inference.py --net isnet_is --ckpt ./anime-seg/isnetis.ckpt --data /data/input/{input_dir} --out /data/output/ --img-size 1024 --only-matted
 ```
 
 ## Version
